@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:circularflow_angles="2"
+    tools:context=".MainActivity"
+    android:background="@drawable/fondo_login">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="40dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        tools:layout_editor_absoluteX="131dp"
+        tools:layout_editor_absoluteY="70dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bienvenido"
+            android:textAlignment="center"
+
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="50sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="590dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <EditText
+
+                android:id="@+id/correo"
+                android:layout_width="300dp"
+                android:layout_height="30dp"
+                android:background="#FBFAFA"
+                android:backgroundTint="#F1F0F0"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                tools:text="alejofb10049@gmail.com" />
+
+            <EditText
+                android:id="@+id/Password"
+                android:layout_width="300dp"
+                android:layout_height="30dp"
+                android:autoText="false"
+                android:background="#F8F8F8"
+                android:cursorVisible="false"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="textPassword"
+                android:textSize="24sp"
+                tools:text="Password" />
+
+            <Button
+                android:id="@+id/LOGIN"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:insetLeft="5dp"
+                android:text="Ingresar"
+                android:backgroundTint="#101010"
+                android:textSize="20sp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:background="#101010" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
