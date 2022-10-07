@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText correo;
     private EditText Password;
+    private String EmailAddress;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,13 +69,12 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 }
                 empleados = response.body();
-                final String[] EmailAddress = new String[1];
                 empleados.forEach(p -> {
                     int i = Log.i("Prods: ", p.getEmail().toString());
-                    EmailAddress[0] =p.getEmail();
+                    EmailAddress = p.getEmail();
 
                 });
-                Log.i("prueba", EmailAddress[0]);
+                Log.i("prueba", EmailAddress);
 
             }
 
