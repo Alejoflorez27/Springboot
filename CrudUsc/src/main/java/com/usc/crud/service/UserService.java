@@ -38,7 +38,7 @@ public class UserService {
             msj = "usuario eliminado correctamente";
         }
         else{
-            msj = "usuario no encontradpo";
+            msj = "usuario no encontrado";
         }
 
 return msj;
