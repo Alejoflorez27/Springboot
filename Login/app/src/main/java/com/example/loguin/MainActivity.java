@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText correo;
     private EditText Password;
+    private String contrasena;
     private String EmailAddress;
 
     @Override
@@ -41,13 +42,20 @@ public class MainActivity extends AppCompatActivity {
 
         correo = findViewById(R.id.correo);
         Password = findViewById(R.id.Password);
-
+        getAll();
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getAll();
+
+                if (EmailAddress.equals(correo.getText().toString())) {
+                    if (contrasena.equals(Password.getText().toString())) {
+                        Intent intent= new Intent(MainActivity.this,Calculator.class);
+                        startActivity(intent);
+                    }
+                }
             }
+
         });
 
     }
@@ -69,9 +77,16 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 }
                 empleados = response.body();
+
                 empleados.forEach(p -> {
                     int i = Log.i("Prods: ", p.getEmail().toString());
                     EmailAddress = p.getEmail();
+
+                });
+
+                empleados.forEach(p -> {
+                    int i = Log.i("Prods: ", p.getPassword().toString());
+                    contrasena = p.getPassword();
 
                 });
                 Log.i("prueba", EmailAddress);
