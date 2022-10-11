@@ -28,7 +28,6 @@ public class Calculator extends AppCompatActivity {
         btnMenos = findViewById(R.id.btnMenos);
         btnMultiplo = findViewById(R.id.btnMultiplo);
         btnDiv = findViewById(R.id.btnDiv);
-
         tvResultado= findViewById(R.id.tvResultado);
 
 

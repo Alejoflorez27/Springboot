@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
                 if (EmailAddress.equals(correo.getText().toString())) {
                     if (contrasena.equals(Password.getText().toString())) {
-                        Intent intent= new Intent(MainActivity.this,Calculator.class);
+                        Intent intent= new Intent(MainActivity.this,Dashboard.class);
                         startActivity(intent);
                     }
                 }

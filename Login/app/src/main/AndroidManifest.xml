@@ -2,11 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.loguin">
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -15,9 +14,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Loguin"
+        android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".MenuSlideActivity"
+            android:exported="false"
+            android:label="@string/title_activity_menu_slide"
+            android:theme="@style/Theme.Loguin.NoActionBar" />
+        <activity
             android:name=".Calculator"
+            android:exported="false" />
+        <activity
+            android:name=".Dashboard"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
