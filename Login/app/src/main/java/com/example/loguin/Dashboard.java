@@ -1,8 +1,8 @@
 package com.example.loguin;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Toast;
@@ -10,6 +10,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Dashboard extends AppCompatActivity implements View.OnClickListener {
+
+    String _url = "https://www.facebook.com/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,9 +55,11 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
         boton4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Uri _link = Uri.parse(_url);
                 Toast notificacion = Toast.makeText(Dashboard.this, "trabajo", Toast.LENGTH_SHORT);
                 notificacion.show();
-                Intent intent= new Intent(getApplicationContext(), MenuSlideActivity.class);
+                //Intent intent= new Intent(getApplicationContext(), MenuSlideActivity.class);
+                Intent intent= new Intent(Intent.ACTION_VIEW,_link);
                 startActivity(intent);
             }
         });

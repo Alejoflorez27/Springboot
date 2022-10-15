@@ -33,42 +33,5 @@
         android:layout_height="wrap_content"
         android:text="@string/nav_header_subtitle" />
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:textAlignment="gravity">
-
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textAlignment="center"
-                android:textDirection="locale">
-
-                <ImageView
-                    android:id="@+id/imageView6"
-                    android:layout_width="134dp"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/whatsappIcon" />
-
-                <ImageView
-                    android:id="@+id/imageView5"
-                    android:layout_width="136dp"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/InstagramIcon" />
-
-                <ImageView
-                    android:id="@+id/imageView4"
-                    android:layout_width="109dp"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/facebook" />
-            </TableRow>
-
-        </TableLayout>
-
-    </FrameLayout>
 
 </LinearLayout>
